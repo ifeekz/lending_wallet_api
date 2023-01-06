@@ -3,11 +3,13 @@ import { User } from '@interfaces/users.interface';
 
 export class Users extends Model implements User {
   id!: number;
+  name!: string;
   email!: string;
   password!: string;
+  created_at!: Date;
 
-  static tableName = 'users'; // database table name
-  static idColumn = 'id'; // id column name
+  static tableName = 'users';
+  static idColumn = 'id';
 }
 
 export type UsersShape = ModelObject<Users>;
